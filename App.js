@@ -9,8 +9,8 @@ import CounterApp from './CounterApp';
 const App = () => {
   return (
     <ScrollView style={styles.container}>
-      <Messenger />
-      <NewsFeed />
+      <ColorchangerApp/>
+      <CounterApp />
       
     </ScrollView>
   );
