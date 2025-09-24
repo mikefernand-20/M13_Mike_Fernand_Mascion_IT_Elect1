@@ -1,18 +1,27 @@
 // App.js
 import React from 'react';
-import { ScrollView } from 'react-native';
-import Messenger from './Messenger';
-import NewsFeed from './NewsFeed';
-import styles from './styles';
+import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
+import CounterApp from './CounterApp';
+import ColorChangerApp from './ColorChangerApp';
 
-const App = () => {
+export default function App() {
   return (
-    <ScrollView style={styles.container}>
-      <Messenger />
-      <NewsFeed />
-      
-    </ScrollView>
+    <SafeAreaView style={styles.safeArea}>
+      <ScrollView contentContainerStyle={styles.container}>
+        <CounterApp />
+        <ColorChangerApp />
+      </ScrollView>
+    </SafeAreaView>
   );
-};
+}
 
-export default App;
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+  },
+  container: {
+    padding: 20,
+    gap: 40,
+  },
+});
